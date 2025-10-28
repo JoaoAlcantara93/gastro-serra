@@ -1,0 +1,240 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #666;
+  line-height: 1.5;
+}
+.clearfix::after,
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  max-width: 90%;
+  height: 50%;
+  display: block;
+}
+/* header*/
+.main-header {
+  background-color: #000;
+  text-align: center;
+  color: white;
+}
+.main-header ul {
+  background-color: #492727;
+  list-style: none;
+  padding: 0em;
+  margin: 0;
+}
+
+.main-header a {
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  display: block;
+}
+
+/*button*/
+.button {
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: solid;
+  border-color: #46070796;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #492727;
+}
+
+/*TEXTO PRINCIPAL*/
+.top-content p,
+h2,
+.main-content p {
+  color: #492727;
+  margin: 1em;
+}
+
+/*TEXTO COM IMAGEM*/
+.midle-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /*   max-width: 300px; */
+}
+.midle-content {
+  padding: 16px;
+  background-color: rgb(34, 32, 32);
+}
+.midle-content p {
+  color: white;
+}
+.midle-card .midle-content {
+  flex: 1 1 200px;
+}
+
+.main-content {
+  text-align: left;
+  min-width: 300px;
+  /*max-width: 1000px;*/
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+.main-content h2 {
+  color: #814444;
+}
+
+/*IMAGEM REFERENTE AO MIDLE CONTENT*/
+.image-text {
+  display: grid;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/*Main Footer*/
+.main-footer {
+  position: static;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.main-footer p {
+  margin: 0;
+}
+.main-footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}
+.main-footer ul li {
+  display: inline-block;
+  margin: 0.5em;
+}
+.ul-icons {
+  padding: 0;
+}
+.hidden {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: block;
+}
+.principal {
+  text-align: center;
+  padding: 38px 0 0 0;
+}
+/* que tenha o atributo class que começa com Icon*/
+.principal spam[class^="icon"] {
+  font-size: 4em;
+  color: #492727;
+}
+/*  Imagem ilustrativa   */
+.gallery-div {
+  background-color: rgb(19, 18, 18);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  padding: 40px;
+  margin: 0 auto;
+}
+.gallery-card p {
+  color: #fff;
+  text-align: center;
+}
+.gallery-card img {
+  width: 90%;
+  height: 9em;
+  border-radius: 100%;
+}
+
+.gallery-title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+/*media querie*/
+
+@media screen and (min-width: 1000px) {
+  /*COLOCANDO O MENU NA LATERAL*/
+  .main-header-title {
+    float: left;
+    margin-left: 0.5em;
+  }
+  .main-nav {
+    float: right;
+    margin-top: 30px;
+  }
+  .main-nav ul {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav li {
+    display: inline-block;
+  }
+
+  .main-nav li:hover {
+    border-bottom: 1px solid #fff;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 150ms;
+  }
+  .main-nav a {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+  }
+
+  .main-content .title {
+    color: white;
+  }
+
+  /*MODIFICANDO O SPAM E OS TEXTO DO TOP-CONTENT*/
+
+  .principal spam[class^="icon"] {
+    color: #fff;
+    float: left;
+    padding: 0.5em;
+  }
+  .top-content p,
+  h2 {
+    color: #fff;
+    text-align: left;
+    margin-top: 0.5em;
+  }
+
+  .top-content {
+    padding: 5em;
+    background-image: url("../Image/fundo3.jpg");
+    background-size: 1440px;
+    opacity: 0.9;
+  }
+
+  .main-top-content {
+    text-shadow: 2px 2px 2px #000;
+  }
+
+  .gallery-card img {
+    width: 90%;
+    height: 9em;
+    border-radius: 10%;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+  .icon-menu {
+    display: none;
+    visibility: hidden;
+  }
+}
